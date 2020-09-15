@@ -10,7 +10,9 @@ tags:
   - flavor
   - tasting
 ---
-![flavor wheel](https://res.cloudinary.com/patarsofi/image/upload/c_scale,q_auto:best,w_1503/v1599788735/samples/cloudinary-group.jpg)
+
+
+![flavor wheel](https://res.cloudinary.com/patarsofi/image/upload/q_auto/v1599788735/samples/cloudinary-group.jpg)
 
 The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
 
