@@ -56,24 +56,39 @@ BlogPostTemplate.propTypes = {
 };
 
 const addSrcSet = (html) => {
+  const breakpoints = [1500, 1000, 847, 681, 477, 200];
+
   const root = parse(html);
   const imagens = root.querySelectorAll("img");
 
   for (const img of imagens) {
     console.log("*******************************");
-    console.log("imagem: ", img.toString());
+    const imgSrc = img.getAttribute("src");
+    console.log("imagem src: ", imgSrc.toString());
+    if (imgSrc && imgSrc.includes("res.cloudinary.com")) {
+      const srcset = breakpoints.map((breack) => {
+        const ff = `f_auto,q_auto,w_${breack}`;
+        const res = imgSrc.replace("image/upload/", `$&${ff}/`);
+        return `${res} ${breack}w`;
+      });
+      const gg = srcset.join(", ");
+
+      img.setAttribute("srcset", gg);
+    }
   }
+  console.log("root src: ", root.toString());
+  return root.toString();
 };
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
-  addSrcSet(post.html);
+  const htmlEdited = addSrcSet(post.html);
 
   return (
     <Layout>
       <BlogPostTemplate
-        content={post.html}
+        content={htmlEdited}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
