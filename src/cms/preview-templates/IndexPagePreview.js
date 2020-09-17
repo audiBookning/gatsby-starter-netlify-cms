@@ -4,7 +4,7 @@ import { IndexPageTemplate } from "../../templates/index-page";
 
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
-  console.log("IndexPagePreview data: ", JSON.stringify(data, null, 2));
+  //console.log("IndexPagePreview data: ", JSON.stringify(data, null, 2));
 
   if (data) {
     return (

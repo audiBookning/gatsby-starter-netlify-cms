@@ -3,7 +3,7 @@ import React from "react";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const FeatureGrid = ({ gridItems }) => {
-  console.log("FeatureGrid: ", gridItems);
+  //console.log("FeatureGrid: ", gridItems);
   return (
     <div className="columns is-multiline">
       {gridItems.map((image) => (

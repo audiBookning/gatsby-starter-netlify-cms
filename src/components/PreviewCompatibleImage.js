@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
-  console.log("PreviewCompatibleImage: ", imageInfo);
+  //console.log("PreviewCompatibleImage: ", imageInfo);
   const imageStyle = { borderRadius: "5px" };
   const { alt = "", childImageSharp, image } = imageInfo;
 

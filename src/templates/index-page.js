@@ -40,7 +40,7 @@ const getImageSrc = (imageInfo) => {
 };
 
 export const IndexPageTemplate = ({ title, gallery }) => {
-  console.log("IndexPageTemplate gallery: ", JSON.stringify(gallery, null, 2));
+  //console.log("IndexPageTemplate gallery: ", JSON.stringify(gallery, null, 2));
 
   const photos = gallery.map((x) => {
     return getImageSrc(x);
