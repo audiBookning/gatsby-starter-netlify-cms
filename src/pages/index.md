@@ -3,7 +3,7 @@ templateKey: index-page
 title: Amazing View
 heading: Amazing View
 subheading: From the Lagoa de Obidos
-jumbo: /img/home-jumbotron.jpg
+jumbo: /img/6f95e92f-9c02-4f41-a42c-113046a47213.jpg
 gallery:
   - image: /img/0.0.0.1.JPG
   - image: /img/0.0.0.2.JPG
