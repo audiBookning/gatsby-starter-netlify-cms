@@ -1,8 +1,9 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience!!
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+title: Amazing View
+heading: Amazing View
+subheading: From the Lagoa de Obidos
+jumbo: /img/home-jumbotron.jpg
 gallery:
   - image: /img/0.0.0.1.JPG
   - image: /img/0.0.0.2.JPG

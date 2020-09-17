@@ -39,8 +39,8 @@ const getImageSrc = (imageInfo) => {
   if (!!image && typeof image === "string") return { src: image };
 };
 
-export const IndexPageTemplate = ({ title, gallery }) => {
-  //console.log("IndexPageTemplate gallery: ", JSON.stringify(gallery, null, 2));
+export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
+  console.log("IndexPageTemplate jumbo: ", JSON.stringify(jumbo, null, 2));
 
   const photos = gallery.map((x) => {
     return getImageSrc(x);
@@ -61,20 +61,70 @@ export const IndexPageTemplate = ({ title, gallery }) => {
 
   return (
     <div>
-      <Gallery photos={photos} onClick={openLightbox} />
-      <ModalGateway>
-        {viewerIsOpen ? (
-          <Modal onClose={closeLightbox}>
-            <Carousel
-              currentIndex={currentImage}
-              views={photos.map((x) => ({
-                ...x,
-                srcset: x.srcSet,
-              }))}
-            />
-          </Modal>
-        ) : null}
-      </ModalGateway>
+      <div
+        className="full-width-image margin-top-0"
+        style={{
+          backgroundImage: `url(${
+            !!jumbo.childImageSharp ? jumbo.childImageSharp.fluid.src : jumbo
+          })`,
+          backgroundPosition: `top left`,
+          backgroundAttachment: `fixed`,
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            height: "150px",
+            lineHeight: "1",
+            justifyContent: "space-around",
+            alignItems: "left",
+            flexDirection: "column",
+          }}
+        >
+          <h1
+            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+            style={{
+              boxShadow:
+                "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
+              backgroundColor: "rgb(255, 68, 0)",
+              color: "white",
+              lineHeight: "1",
+              padding: "0.25em",
+            }}
+          >
+            {title}
+          </h1>
+          <h3
+            className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+            style={{
+              boxShadow:
+                "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
+              backgroundColor: "rgb(255, 68, 0)",
+              color: "white",
+              lineHeight: "1",
+              padding: "0.25em",
+            }}
+          >
+            {subheading}
+          </h3>
+        </div>
+      </div>
+      <div>
+        <Gallery photos={photos} onClick={openLightbox} />
+        <ModalGateway>
+          {viewerIsOpen ? (
+            <Modal onClose={closeLightbox}>
+              <Carousel
+                currentIndex={currentImage}
+                views={photos.map((x) => ({
+                  ...x,
+                  srcset: x.srcSet,
+                }))}
+              />
+            </Modal>
+          ) : null}
+        </ModalGateway>
+      </div>
     </div>
   );
 };
@@ -95,6 +145,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         title={frontmatter.title}
+        jumbo={frontmatter.jumbo}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         description={frontmatter.description}
@@ -119,6 +170,13 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        jumbo {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         heading
         subheading
         gallery {
