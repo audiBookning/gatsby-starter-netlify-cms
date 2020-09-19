@@ -110,7 +110,7 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
           </h3>
         </div>
       </div>
-      <div>
+      <div className="galeria">
         <Gallery photos={photos} onClick={openLightbox} />
         <ModalGateway>
           {viewerIsOpen ? (
