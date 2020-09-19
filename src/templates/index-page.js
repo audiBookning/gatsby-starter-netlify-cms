@@ -40,7 +40,7 @@ const getImageSrc = (imageInfo) => {
 };
 
 export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
-  console.log("IndexPageTemplate jumbo: ", JSON.stringify(jumbo, null, 2));
+  //console.log("IndexPageTemplate jumbo: ", JSON.stringify(jumbo, null, 2));
 
   const photos = gallery.map((x) => {
     return getImageSrc(x);
