@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Amazing View
 heading: Amazing View
-subheading: From the Lagoa de Obidos
+subheading: Lagoa de Obidos
 jumbo: /img/6f95e92f-9c02-4f41-a42c-113046a47213.jpg
 gallery:
   - image: /img/0.0.0.1.JPG
@@ -99,5 +99,5 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
-description: lorem ipsum
+description: Amazing View - Lagoa de Obidos
 ---
