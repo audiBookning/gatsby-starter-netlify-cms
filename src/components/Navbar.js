@@ -24,7 +24,7 @@ const Navbar = class extends React.Component {
               <img
                 src={amazingview}
                 alt="AmazingView"
-                style={{ width: "150px", "max-height": "3rem" }}
+                style={{ width: "150px", maxHeight: "3rem" }}
               />
             </Link>
           </div>
