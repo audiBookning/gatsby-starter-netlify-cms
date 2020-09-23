@@ -66,9 +66,9 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
     customPaging: function (i) {
       const linguagem = ["PT", "FR", "EN"];
       return (
-        <a>
+        <button href="#">
           <p>{linguagem[i]}</p>
-        </a>
+        </button>
       );
     },
     /*  */
