@@ -167,7 +167,8 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
         </div>
         <Slider {...settings}>
           <div>
-            <h3>PT</h3>
+            <img src="bandeiras/pt.svg" />
+            <br />
             <p>
               Acordar com a acalmia da Lagoa é algo que não se consegue traduzir
               em palavras.
@@ -196,7 +197,8 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
             </p>
           </div>
           <div>
-            <h3>FR</h3>
+            <img src="bandeiras/fr.svg" />
+            <br />
             <p>
               Se réveiller avec le calme de la “Lagoa” est un fait impossible de
               décrire par des mots.
@@ -226,7 +228,8 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
             </p>
           </div>
           <div>
-            <h3>EN</h3>
+            <img src="bandeiras/gb.svg" />
+            <br />
             <p>
               Waking up at the calm of “Lagoa de Óbidos (Foz do Arelho)” is an
               event impossible to describe in words.
@@ -256,6 +259,15 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
             </p>
           </div>
         </Slider>
+        <div style={{ display: "none" }}>
+          <div className="slick-slider">
+            <div className="slick-list">
+              <div className="slick-track">
+                <div className="slick-slide"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="galeria">
         <Gallery photos={photos} onClick={openLightbox} />

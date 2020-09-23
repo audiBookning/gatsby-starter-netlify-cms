@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "./all.sass";
+import "./more.sass";
 import useSiteMetadata from "./SiteMetadata";
 
 const TemplateWrapper = ({ children }) => {
