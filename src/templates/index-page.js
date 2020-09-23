@@ -104,7 +104,7 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
         },
       },
       {
-        breakpoint: 460,
+        breakpoint: 660,
         settings: {
           slidesToShow: 1,
           infinite: true,
