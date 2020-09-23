@@ -1,9 +1,10 @@
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Gallery from "react-photo-gallery";
 import Slider from "react-slick";
+import { FontContext } from "../components/fontContext";
 import Layout from "../components/Layout";
 
 const getImageSrc = (imageInfo) => {
@@ -42,6 +43,8 @@ const getImageSrc = (imageInfo) => {
 
 export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
   //console.log("IndexPageTemplate jumbo: ", JSON.stringify(jumbo, null, 2));
+
+  const { textFont, setTextFont } = useContext(FontContext);
 
   const photos = gallery.map((x) => {
     return getImageSrc(x);
@@ -167,35 +170,42 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
         </div>
         <Slider {...settings}>
           <div>
-            <img src="bandeiras/pt.svg" />
-            <br />
-            <p>
-              Acordar com a acalmia da Lagoa é algo que não se consegue traduzir
-              em palavras.
-            </p>
-            <p>
-              Depois disfruta-se de um bom pequeno almoço, enquanto se observa a
-              visita matinal dos patos à escola de vela.
-            </p>
-            <p>
-              A temperatura amena, que a maior Lagoa de água salgada da Europa
-              proporciona, gerando um “microclima”, convida agora a um passeio
-              pedestre, ou de Bicicleta, sabendo que no regresso teremos uma
-              piscina de água aquecida à nossa espera.
-            </p>
-            <p>
-              Uma vista dinâmica, apenas comparável a um quadro que se vai
-              re-desenhando ao sabor das tonalidades das pequenas embarcações,
-              dos kitesurf, dos desportos à vela e paddling board, da disposição
-              solar, da imensidão da lagoa, das aves, na sua maioria de espécies
-              protegidas, faz-nos esquecer que os meios audiovisuais existem.
-            </p>
-            <p>
-              Para o fim do dia, este local reserva-nos ainda um pequeno
-              tesouro, de onde se pode disfrutar dos mais belos pôr de sol da
-              zona Oeste.
-            </p>
+            <div
+              className="text-traduction"
+              style={{ color: "#ccc", fontSize: textFont }}
+            >
+              <img src="bandeiras/pt.svg" />
+              <br />
+              <p>
+                Acordar com a acalmia da Lagoa é algo que não se consegue
+                traduzir em palavras.
+              </p>
+              <p>
+                Depois disfruta-se de um bom pequeno almoço, enquanto se observa
+                a visita matinal dos patos à escola de vela.
+              </p>
+              <p>
+                A temperatura amena, que a maior Lagoa de água salgada da Europa
+                proporciona, gerando um “microclima”, convida agora a um passeio
+                pedestre, ou de Bicicleta, sabendo que no regresso teremos uma
+                piscina de água aquecida à nossa espera.
+              </p>
+              <p>
+                Uma vista dinâmica, apenas comparável a um quadro que se vai
+                re-desenhando ao sabor das tonalidades das pequenas embarcações,
+                dos kitesurf, dos desportos à vela e paddling board, da
+                disposição solar, da imensidão da lagoa, das aves, na sua
+                maioria de espécies protegidas, faz-nos esquecer que os meios
+                audiovisuais existem.
+              </p>
+              <p>
+                Para o fim do dia, este local reserva-nos ainda um pequeno
+                tesouro, de onde se pode disfrutar dos mais belos pôr de sol da
+                zona Oeste.
+              </p>
+            </div>
           </div>
+
           <div>
             <img src="bandeiras/fr.svg" />
             <br />
@@ -227,7 +237,7 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
               soleil de l’Ouest portugais.
             </p>
           </div>
-          <div>
+          <div style={{ fontSize: textFont }}>
             <img src="bandeiras/gb.svg" />
             <br />
             <p>

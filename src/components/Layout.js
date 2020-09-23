@@ -1,16 +1,25 @@
 import { withPrefix } from "gatsby";
-import React from "react";
+import React, { useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "./all.sass";
+import { FontContext } from "./fontContext";
 import "./more.sass";
 import useSiteMetadata from "./SiteMetadata";
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = (props) => {
   const { title, description } = useSiteMetadata();
+
+  const [textFont, setTextFont] = useState(16);
+
+  const value = useMemo(() => {
+    console.log("font memo: ", textFont);
+    return { textFont, setTextFont };
+  }, [textFont, setTextFont]);
+
   return (
     <div>
       <Helmet>
@@ -51,9 +60,11 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
-      <div>{children}</div>
-      <Footer />
+      <FontContext.Provider value={value}>
+        <Navbar />
+        <div>{props.children}</div>
+        <Footer />
+      </FontContext.Provider>
     </div>
   );
 };
