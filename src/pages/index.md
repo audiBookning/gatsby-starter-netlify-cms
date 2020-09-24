@@ -33,7 +33,30 @@ gallery:
   - image: /img/5.2.006.JPG
   - image: /img/5.2.007.JPG
   - image: /img/5.2.009.JPG
-  - image: /img/6246_02_5b96b1f73c2b8.jpg
+  - image: /img/a01.JPG
+  - image: /img/a02.jpg
+  - image: /img/a03.JPG
+  - image: /img/a04.JPG
+  - image: /img/a05.JPG
+  - image: /img/a06.jpg
+  - image: /img/a07.JPG
+  - image: /img/b01.JPG
+  - image: /img/b02.JPG
+  - image: /img/b03.JPG
+  - image: /img/b04.JPG
+  - image: /img/b05.JPG
+  - image: /img/b06.jpg
+  - image: /img/b07.JPG
+  - image: /img/b08.jpg
+  - image: /img/c01.JPG
+  - image: /img/c02.JPG
+  - image: /img/c03.JPG
+  - image: /img/c04.JPG
+  - image: /img/c05.JPG
+  - image: /img/b06.jpg
+  - image: /img/c07.JPG
+  - image: /img/c08.JPG
+  - image: /img/maxresdefault-e1553527060875.jpg
   - image: /img/6246_06_5b96b211002ab.jpg
   - image: /img/9.001.JPG
   - image: /img/9.002.JPG
@@ -63,7 +86,7 @@ gallery:
   - image: /img/4f354345f8084ff6ae3cfb1c357c96a2.png
   - image: /img/0.0.5.JPG
   - image: /img/the-buddha-eden-garden.jpg
-  - image: /img/maxresdefault-e1553527060875.jpg
+  - image: /img/6246_02_5b96b1f73c2b8.jpg
 intro:
   blurbs:
     - image: /img/coffee.png
