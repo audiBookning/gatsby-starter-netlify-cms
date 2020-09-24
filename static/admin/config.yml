@@ -43,5 +43,14 @@ collections:
               label: Gallery,
               name: gallery,
               widget: list,
-              fields: [{ label: Image, name: image, widget: image }],
+              fields:
+                [
+                  { label: Image, name: image, widget: image },
+                  {
+                    label: Title,
+                    name: title,
+                    widget: string,
+                    required: false,
+                  },
+                ],
             }
