@@ -12,7 +12,6 @@ media_folder: static/img
 public_folder: /img
 
 # publish_mode: editorial_workflow
-#publish_mode: editorial_workflow
 
 #media_library:
 #  name: cloudinary
@@ -50,6 +49,46 @@ collections:
                     label: Title,
                     name: title,
                     widget: string,
+                    required: false,
+                  },
+                  {
+                    label: "Tags field",
+                    name: "tags-field",
+                    widget: "relation",
+                    collection: "tags_files",
+                    file: "mytags",
+                    search_fields: ["tag.*.name"],
+                    value_field: "tag.*.name",
+                    display_fields: ["tag.*.name"],
+                    required: false,
+                  },
+                ],
+            }
+
+  - name: "tags_files"
+    label: "Tags Files"
+    files:
+      - file: "src/pages/mytags/index.md"
+        name: "mytags"
+        label: "My Tags"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "mytags-page",
+            }
+          - {
+              label: "Tag",
+              name: "tag",
+              widget: "list",
+              fields:
+                [
+                  { label: "Name", name: "name", widget: "string" },
+                  {
+                    label: "Description",
+                    name: "description",
+                    widget: "text",
                     required: false,
                   },
                 ],
