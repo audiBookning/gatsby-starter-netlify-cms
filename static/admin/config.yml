@@ -93,3 +93,24 @@ collections:
                   },
                 ],
             }
+
+  - name: "traducao"
+    label: "Traducao"
+    folder: "src/pages/traducao"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "traducao-texto",
+        }
+      - {
+          label: "Lingua",
+          name: "lingua",
+          widget: "select",
+          options: ["PT", "FR", "EN"],
+        }
+      - { label: "Flag Image", name: "flagimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }

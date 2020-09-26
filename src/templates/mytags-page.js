@@ -30,7 +30,7 @@ MytagsPageTemplate.propTypes = {
 const MytagsPage = ({ data }) => {
   const { markdownRemark: mytags } = data;
   const tagArray = mytags.frontmatter.tag ? mytags.frontmatter.tag : [];
-  console.log("MytagsPage data: ", JSON.stringify(data, null, 2));
+  //console.log("MytagsPage data: ", JSON.stringify(data, null, 2));
 
   return (
     <Layout>

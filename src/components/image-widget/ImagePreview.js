@@ -18,6 +18,7 @@ const StyledImageAsset = ({ getAsset, value, field }) => {
 };
 
 const ImagePreviewContent = (props) => {
+  console.log("***********************************");
   const { value, getAsset, field } = props;
   if (Array.isArray(value) || List.isList(value)) {
     return value.map((val) => (
@@ -34,7 +35,7 @@ const ImagePreviewContent = (props) => {
 
 const ImagePreview = (props) => {
   console.log("***********************************");
-  console.log("ImagePreview props: ", JSON.stringify(props, null, 2));
+  //console.log("ImagePreview props: ", JSON.stringify(props, null, 2));
   console.log("***********************************");
   return (
     <WidgetPreviewContainer>
