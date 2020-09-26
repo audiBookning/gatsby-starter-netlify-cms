@@ -5,7 +5,7 @@ import { IndexPageTemplate } from "../../templates/index-page";
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
   // console.log("IndexPagePreview gallery: ", JSON.stringify(data, null, 2));
-  const formatedGallery = data.gallery.map((image) => getAsset(image.image));
+  //const formatedGallery = data.gallery.map((image) => getAsset(image.image));
   /* console.log(
     "IndexPagePreview formatedGallery: ",
     JSON.stringify(formatedGallery, null, 2)

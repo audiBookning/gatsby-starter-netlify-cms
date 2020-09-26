@@ -1,4 +1,9 @@
 import CMS from "netlify-cms-app";
+import {
+  imageControlComponent,
+  imagePreviewCmp,
+  imageSchema,
+} from "./../components/image-widget/index";
 // import uploadcare from 'netlify-cms-media-library-uploadcare'
 //import cloudinary from "netlify-cms-media-library-cloudinary";
 /* import AboutPagePreview from "./preview-templates/AboutPagePreview";
@@ -15,3 +20,10 @@ CMS.registerPreviewTemplate("mytags", MyTagsPagePreview);
 /* CMS.registerPreviewTemplate("about", AboutPagePreview);
 CMS.registerPreviewTemplate("products", ProductPagePreview);
 CMS.registerPreviewTemplate("blog", BlogPostPreview); */
+
+CMS.registerWidget(
+  "imagetest",
+  imageControlComponent,
+  imagePreviewCmp,
+  imageSchema
+);
