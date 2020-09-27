@@ -11,12 +11,14 @@ import BlogPostPreview from "./preview-templates/BlogPostPreview";
 import ProductPagePreview from "./preview-templates/ProductPagePreview"; */
 import IndexPagePreview from "./preview-templates/IndexPagePreview";
 import MyTagsPagePreview from "./preview-templates/MyTagsPagePreview";
+import TraducaoPostPreview from "./preview-templates/TraducaoPostPreview";
 
 // CMS.registerMediaLibrary(uploadcare)
 //CMS.registerMediaLibrary(cloudinary);
 
 CMS.registerPreviewTemplate("index", IndexPagePreview);
 CMS.registerPreviewTemplate("mytags", MyTagsPagePreview);
+CMS.registerPreviewTemplate("traducao", TraducaoPostPreview);
 /* CMS.registerPreviewTemplate("about", AboutPagePreview);
 CMS.registerPreviewTemplate("products", ProductPagePreview);
 CMS.registerPreviewTemplate("blog", BlogPostPreview); */

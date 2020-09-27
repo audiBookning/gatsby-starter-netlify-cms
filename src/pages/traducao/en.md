@@ -1,8 +1,9 @@
 ---
-templateKey: traducao-texto
+templateKey: traducao-page
 lingua: EN
 flagimage: /img/flag-gb.svg
 ---
+
 Waking up at the calm of “Lagoa de Óbidos (Foz do Arelho)” is an
 
 event impossible to describe in words.

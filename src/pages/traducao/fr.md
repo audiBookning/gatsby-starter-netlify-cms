@@ -1,8 +1,9 @@
 ---
-templateKey: traducao-texto
+templateKey: traducao-page
 lingua: FR
 flagimage: /img/flag-fr.svg
 ---
+
 Se réveiller avec le calme de la “Lagoa” est un fait impossible de
 
 décrire par des mots.
