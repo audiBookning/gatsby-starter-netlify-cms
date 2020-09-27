@@ -1,4 +1,5 @@
 import { graphql } from "gatsby";
+import { groupBy } from "lodash";
 import PropTypes from "prop-types";
 import React, { useCallback, useState } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
@@ -42,6 +43,21 @@ const getImageSrc = (imageInfo) => {
 
 export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
   //console.log("IndexPageTemplate jumbo: ", JSON.stringify(jumbo, null, 2));
+
+  var grouped = groupBy(gallery, function (x) {
+    return x.tags_field;
+  });
+
+  const fotos = [];
+  for (const key in grouped) {
+    if (grouped.hasOwnProperty(key)) {
+      const ff = grouped[key].map((x) => {
+        return getImageSrc(x);
+      });
+      fotos.push({ tag: key, images: ff });
+    }
+  }
+  console.log("fotos: ", fotos);
 
   const photos = gallery.map((x) => {
     return getImageSrc(x);
@@ -178,7 +194,15 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
         </div>
       </div>
       <div className="galeria">
-        <Gallery photos={photos} onClick={openLightbox} />
+        {fotos &&
+          fotos.map((taggedFoto) => {
+            console.log("taggedFoto2: ", taggedFoto);
+            return (
+              <div className="taggedGalery" key={taggedFoto.tag}>
+                <Gallery photos={taggedFoto.images} onClick={openLightbox} />
+              </div>
+            );
+          })}
         <ModalGateway>
           {viewerIsOpen ? (
             <Modal onClose={closeLightbox}>
@@ -248,6 +272,7 @@ export const pageQuery = graphql`
         heading
         subheading
         gallery {
+          tags_field
           image {
             childImageSharp {
               fluid {
