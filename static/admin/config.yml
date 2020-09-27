@@ -95,6 +95,7 @@ collections:
             }
 
   - name: "traducao"
+    identifier_field: lingua
     label: "Traducao"
     folder: "src/pages/traducao"
     create: true
