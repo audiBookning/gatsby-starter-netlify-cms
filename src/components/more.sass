@@ -1,14 +1,15 @@
 $smaller: 350px;
-$small: 550px;
+$small: 540px;
+$smalless: 780px;
 $medium: 880px;
-$big: 1124px
+$big: 1024px
   
 p
   font-size: 16px 
   
 .full-width-image
   width: 100vw
-  height: 1200px
+  height: 1400px
   background-size: cover
   background-position: bottom
   display: flex
@@ -16,13 +17,15 @@ p
   align-items: center
   flex-direction: column
   @media screen and (min-width: $smaller) 
-    height: 1100px 
+    height: 1200px 
   @media screen and (min-width: $small) 
-    height: 700px 
+    height: 1000px 
+  @media screen and (min-width: $smalless) 
+    height: 800px 
   @media screen and (min-width: $medium) 
-    height: 1100px
+    height: 1200px
   @media screen and (min-width: $big) 
-    height: 1000px
+    height: 1200px
 
 .galeria img 
   object-fit: cover
