@@ -5,6 +5,7 @@ import React, { useCallback, useState } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Gallery from "react-photo-gallery";
 import Layout from "../components/Layout";
+import MytagsPageQuery from "../components/tagTitle";
 import TraducaoSlider from "../components/TraducaoSlider";
 
 const getImageSrc = (imageInfo) => {
@@ -42,7 +43,11 @@ const getImageSrc = (imageInfo) => {
 };
 
 export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
-  //console.log("IndexPageTemplate jumbo: ", JSON.stringify(jumbo, null, 2));
+  const { tag: tagArray } = MytagsPageQuery();
+  /* console.log(
+    "IndexPageTemplate mytagsPageQuery: ",
+    JSON.stringify(tagArray, null, 2)
+  ); */
 
   var grouped = groupBy(gallery, function (x) {
     return x.tags_field;
@@ -54,10 +59,18 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
       const ff = grouped[key].map((x) => {
         return getImageSrc(x);
       });
-      fotos.push({ tag: key, images: ff });
+      const result = tagArray.find((obj) => {
+        return obj.name === key;
+      });
+      fotos.push({ key, description: result.description, images: ff });
     }
   }
-  console.log("fotos: ", fotos);
+  //console.log("fotos: ", fotos);
+
+  const sortedFotos = tagArray.map((tag) =>
+    fotos.find((foto) => foto.description === tag.description)
+  );
+  //console.log("sorted fotos: ", sortedFotos);
 
   const photos = gallery.map((x) => {
     return getImageSrc(x);
@@ -176,6 +189,7 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
               color: "white",
               lineHeight: "1",
               padding: "0.25em",
+              margin: "auto",
             }}
           >
             {subheading}
@@ -194,11 +208,25 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
         </div>
       </div>
       <div className="galeria">
-        {fotos &&
-          fotos.map((taggedFoto) => {
-            console.log("taggedFoto2: ", taggedFoto);
+        {sortedFotos &&
+          sortedFotos.map((taggedFoto) => {
+            //console.log("taggedFoto2: ", taggedFoto);
             return (
-              <div className="taggedGalery" key={taggedFoto.tag}>
+              <div
+                className="taggedGalery"
+                key={taggedFoto.key}
+                style={{ display: "flex", flexDirection: "column" }}
+              >
+                <h1
+                  className="tag-description has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+                  style={{
+                    boxShadow:
+                      "rgb(255 68 0 / 30%) 0.5rem 0px 0px, rgb(255 68 0 / 30%) -0.5rem 0px 0px",
+                    backgroundColor: "rgb(255 68 0 / 10%)",
+                  }}
+                >
+                  {taggedFoto.description}
+                </h1>
                 <Gallery photos={taggedFoto.images} onClick={openLightbox} />
               </div>
             );

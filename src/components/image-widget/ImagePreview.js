@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const StyledImage = styled(({ src }) => {
-  console.log("+++++++++++++++++++++++++++++++");
+  //console.log("+++++++++++++++++++++++++++++++");
   return <img src={src || ""} role="presentation" />;
 })`
   display: block;
@@ -18,7 +18,7 @@ const StyledImageAsset = ({ getAsset, value, field }) => {
 };
 
 const ImagePreviewContent = (props) => {
-  console.log("***********************************");
+  //console.log("***********************************");
   const { value, getAsset, field } = props;
   if (Array.isArray(value) || List.isList(value)) {
     return value.map((val) => (
@@ -34,9 +34,9 @@ const ImagePreviewContent = (props) => {
 };
 
 const ImagePreview = (props) => {
-  console.log("***********************************");
+  //console.log("***********************************");
   //console.log("ImagePreview props: ", JSON.stringify(props, null, 2));
-  console.log("***********************************");
+  //console.log("***********************************");
   return (
     <WidgetPreviewContainer>
       {props.value ? <ImagePreviewContent {...props} /> : null}
