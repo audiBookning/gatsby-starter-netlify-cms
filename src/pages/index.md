@@ -2,8 +2,8 @@
 templateKey: index-page
 title: Amazing View
 heading: Amazing View
-subheading: Lagoa de Obidos
-description: Amazing View - Lagoa de Obidos
+subheading: Lagoa de Óbidos
+description: Amazing View - Lagoa de Óbidos
 jumbo: /img/6f95e92f-9c02-4f41-a42c-113046a47213.jpg
 gallery:
   - image: /img/0.0.0.1.JPG
@@ -62,6 +62,14 @@ gallery:
     tags-field: paisagem
   - image: /img/5.2.009.JPG
     tags-field: paisagem
+  - image: /img/aa01.JPG
+    tags-field: paisagem
+  - image: /img/aa02.JPG
+    tags-field: paisagem
+  - image: /img/aa04.JPG
+    tags-field: paisagem
+  - image: /img/aa05.JPG
+    tags-field: paisagem
   - image: /img/a01.JPG
     tags-field: Lagoa de Óbidos
   - image: /img/a02.jpg
@@ -77,7 +85,7 @@ gallery:
   - image: /img/a07.JPG
     tags-field: paisagem
   - image: /img/b01.JPG
-    tags-field: paisagem
+    tags-field: Foz do Arelho
   - image: /img/b02.JPG
     tags-field: Foz do Arelho
   - image: /img/b03.JPG
@@ -86,7 +94,7 @@ gallery:
     tags-field: paisagem
   - image: /img/b05.JPG
     tags-field: paisagem
-  - image: /img/b06.jpg
+  - image: /img/aa03.jpg
     tags-field: paisagem
   - image: /img/b07.JPG
     tags-field: paisagem
@@ -99,7 +107,7 @@ gallery:
   - image: /img/c03.JPG
     tags-field: Lagoa de Óbidos
   - image: /img/c04.JPG
-    tags-field: paisagem
+    tags-field: Lagoa de Óbidos
   - image: /img/c05.JPG
     tags-field: paisagem
   - image: /img/b06.jpg
@@ -129,7 +137,7 @@ gallery:
   - image: /img/a6.JPG
     tags-field: Lagoa de Óbidos
   - image: /img/windsurfportugal2018-e1523881410609.jpg
-    tags-field: paisagem
+    tags-field: Lagoa de Óbidos
   - image: /img/9.003.JPG
     tags-field: paisagem
   - image: /img/penedo-furado.jpg
@@ -139,7 +147,7 @@ gallery:
   - image: /img/frame2_ed.jpg
     tags-field: Foz do Arelho
   - image: /img/9.004.JPG
-    tags-field: locais
+    tags-field: paisagem
   - image: /img/aad.jpg
     tags-field: São Martinho do Porto
   - image: /img/XXXXXXXXXX.jpg
