@@ -65,11 +65,15 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
       fotos.push({ key, description: result.description, images: ff });
     }
   }
+  //console.log("*****************************************");
   //console.log("fotos: ", fotos);
 
   const sortedFotos = tagArray.map((tag) =>
     fotos.find((foto) => foto.description === tag.description)
   );
+  // TODO: trim empty tags to avoid undefined error in build
+
+  //console.log("*****************************************");
   //console.log("sorted fotos: ", sortedFotos);
 
   const photos = gallery.map((x) => {
@@ -210,7 +214,8 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
       <div className="galeria">
         {sortedFotos &&
           sortedFotos.map((taggedFoto) => {
-            //console.log("taggedFoto2: ", taggedFoto);
+            //console.log("*****************************************");
+            //console.log("taggedFoto2 map: ", taggedFoto);
             return (
               <div
                 className="taggedGalery"
