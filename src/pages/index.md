@@ -2,14 +2,30 @@
 templateKey: index-page
 title: Amazing View
 heading: Amazing View
-subheading: Lagoa-de-Obidos
-description: Amazing View - Lagoa-de-Obidos
+subheading: Lagoa de Óbidos
+description: Amazing View - Lagoa de Óbidos
 jumbo: /img/6f95e92f-9c02-4f41-a42c-113046a47213.jpg
 gallery:
-  - image: /img/0.0.0.1.JPG
-    tags-field: Lagoa-de-Obidos
+  - image: /img/b06.jpg
+    tags-field: paisagem
+  - image: /img/9.004.JPG
+    tags-field: paisagem
+  - image: /img/5.1.006.JPG
+    tags-field: paisagem
+  - image: /img/5.1.007.JPG
+    tags-field: paisagem
+  - image: /img/b07.JPG
+    tags-field: paisagem
+  - image: /img/a3.JPG
+    tags-field: paisagem
   - image: /img/0.0.0.2.JPG
     tags-field: paisagem
+  - image: /img/aa05.JPG
+    tags-field: paisagem
+  - image: /img/aa04.JPG
+    tags-field: paisagem
+  - image: /img/0.0.0.1.JPG
+    tags-field: Lagoa-de-Obidos
   - image: /img/0.0.0.3.JPG
     tags-field: paisagem
   - image: /img/0.0.0.4.JPG
@@ -42,10 +58,6 @@ gallery:
     tags-field: Outras-Localidades
   - image: /img/5.1.005.JPG
     tags-field: paisagem
-  - image: /img/5.1.006.JPG
-    tags-field: paisagem
-  - image: /img/5.1.007.JPG
-    tags-field: paisagem
   - image: /img/5.2.001.JPG
     tags-field: paisagem
   - image: /img/5.2.0010.jpg
@@ -65,10 +77,6 @@ gallery:
   - image: /img/aa01.JPG
     tags-field: paisagem
   - image: /img/aa02.JPG
-    tags-field: paisagem
-  - image: /img/aa04.JPG
-    tags-field: paisagem
-  - image: /img/aa05.JPG
     tags-field: paisagem
   - image: /img/a01.JPG
     tags-field: Lagoa-de-Obidos
@@ -96,8 +104,6 @@ gallery:
     tags-field: paisagem
   - image: /img/aa03.jpg
     tags-field: paisagem
-  - image: /img/b07.JPG
-    tags-field: paisagem
   - image: /img/b08.jpg
     tags-field: paisagem
   - image: /img/c01.JPG
@@ -110,8 +116,6 @@ gallery:
     tags-field: Lagoa-de-Obidos
   - image: /img/c05.JPG
     tags-field: paisagem
-  - image: /img/b06.jpg
-    tags-field: paisagem
   - image: /img/c07.JPG
     tags-field: paisagem
   - image: /img/c08.JPG
@@ -123,8 +127,6 @@ gallery:
   - image: /img/9.001.JPG
     tags-field: paisagem
   - image: /img/9.002.JPG
-    tags-field: paisagem
-  - image: /img/a3.JPG
     tags-field: paisagem
   - image: /img/a1.JPG
     tags-field: paisagem
@@ -146,8 +148,6 @@ gallery:
     tags-field: Foz-do-Arelho
   - image: /img/frame2_ed.jpg
     tags-field: Foz-do-Arelho
-  - image: /img/9.004.JPG
-    tags-field: paisagem
   - image: /img/aad.jpg
     tags-field: Sao-Martinho-do-Porto
   - image: /img/XXXXXXXXXX.jpg
