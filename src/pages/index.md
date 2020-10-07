@@ -24,6 +24,14 @@ gallery:
     tags-field: paisagem
   - image: /img/aa04.JPG
     tags-field: paisagem
+  - image: /img/novapub01.jpg
+    tags-field: paisagem
+  - image: /img/novapub02.jpg
+    tags-field: paisagem
+  - image: /img/novapub03.jpg
+    tags-field: paisagem
+  - image: /img/novapub04.jpg
+    tags-field: paisagem
   - image: /img/0.0.0.1.JPG
     tags-field: Lagoa-de-Obidos
   - image: /img/0.0.0.3.JPG
