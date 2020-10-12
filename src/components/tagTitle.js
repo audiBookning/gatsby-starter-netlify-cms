@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const MytagsPageQuery = () => {
+export  const MytagsPageQuery = () => {
   const { markdownRemark } = useStaticQuery(
     graphql`
       query tagsTitleQuery {
@@ -18,4 +18,4 @@ const MytagsPageQuery = () => {
   return markdownRemark.frontmatter;
 };
 
-export default MytagsPageQuery;
+//export default MytagsPageQuery;

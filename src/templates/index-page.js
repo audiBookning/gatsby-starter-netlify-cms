@@ -5,9 +5,11 @@ import React, { useCallback, useState } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Gallery from "react-photo-gallery";
 import Layout from "../components/Layout";
-import MytagsPageQuery from "../components/tagTitle";
+//import { MytagsPageQuery } from "../components/tagTitle";
 import TraducaoSlider from "../components/TraducaoSlider";
 import VideoPlayer from '../components/VideoPlayer';
+
+
 
 const getImageSrc = (imageInfo) => {
   const { childImageSharp, image } = imageInfo;
@@ -41,14 +43,19 @@ const getImageSrc = (imageInfo) => {
   }
 
   if (!!image && typeof image === "string") return { src: image };
-};
+}; 
 
-export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
-  const { tag: tagArray } = MytagsPageQuery();
-  /* console.log(
+export const IndexPageTemplate = ({ title, subheading, jumbo, gallery, tagArray }) => {
+  console.log( 
+    "IndexPageTemplate tags: ",
+    JSON.stringify(tagArray, null, 2)
+  );
+  //const { tag: tagArray } = MytagsPageQuery();
+  /* console.log( 
     "IndexPageTemplate mytagsPageQuery: ",
     JSON.stringify(tagArray, null, 2)
   ); */
+  console.log('IndexPageTemplate jumbo: ', jumbo)
 
   var grouped = groupBy(gallery, function (x) {
     return x.tags_field;
@@ -215,7 +222,9 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  console.log('IndexPage data: ', data)
+  const { frontmatter } = data.page;
+  const tagArray = data.tagArray.frontmatter.tag;
 
   return (
     <Layout>
@@ -226,6 +235,7 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         description={frontmatter.description}
         gallery={frontmatter.gallery}
+        tagArray={tagArray}
       />
     </Layout>
   );
@@ -233,7 +243,10 @@ const IndexPage = ({ data }) => {
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
+    page: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+    tagArray: PropTypes.shape({
       frontmatter: PropTypes.object,
     }),
   }),
@@ -243,9 +256,9 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    page: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
+        title 
         jumbo {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -271,24 +284,15 @@ export const pageQuery = graphql`
         }
       }
     }
+    tagArray: markdownRemark(frontmatter: {templateKey: {eq: "mytags-page"}}) {
+      frontmatter {
+        tag {
+          name
+          description
+        }
+      }
+    }
   }
 `;
 
-/* 
 
-intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
-        
-*/
