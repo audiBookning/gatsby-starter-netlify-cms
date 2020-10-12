@@ -1,12 +1,12 @@
-$smaller: 350px;
-$small: 540px;
-$smalless: 780px;
-$medium: 880px;
+$smaller: 350px
+$small: 540px
+$smalless: 780px
+$medium: 880px
 $big: 1024px
-  
+
 p
-  font-size: 16px 
-  
+  font-size: 16px
+
 .full-width-image
   width: 100vw
   height: 1400px
@@ -16,18 +16,18 @@ p
   justify-content: space-evenly
   align-items: center
   flex-direction: column
-  @media screen and (min-width: $smaller) 
-    height: 1200px 
-  @media screen and (min-width: $small) 
-    height: 1000px 
-  @media screen and (min-width: $smalless) 
-    height: 800px 
-  @media screen and (min-width: $medium) 
+  @media screen and (min-width: $smaller)
     height: 1200px
-  @media screen and (min-width: $big) 
+  @media screen and (min-width: $small)
+    height: 1000px
+  @media screen and (min-width: $smalless)
+    height: 800px
+  @media screen and (min-width: $medium)
+    height: 1200px
+  @media screen and (min-width: $big)
     height: 1300px
 
-.galeria img 
+.galeria img
   object-fit: cover
 
 .taggedGalery
@@ -44,7 +44,7 @@ p
   margin-top: 15px
   margin-bottom: 10px
 
-.slick-slider 
+.slick-slider
   width: 90%
   margin: auto
   margin-bottom: 35px
@@ -56,12 +56,12 @@ p
   color: #fffff0
   font-family: cursive
   letter-spacing: 1px
-  height: auto;
+  height: auto
 
-.slick-slider p 
+.slick-slider p
   margin-bottom: 0.4rem
 
-.slick-slide > div 
+.slick-slide > div
   background-color: #c28c7655
   padding: 1rem
   height: 100%
@@ -70,10 +70,23 @@ p
 .slick-track
   display: flex
 
-.slick-dots p 
+.slick-dots p
   color: #3273dc
   font-size: 1rem
   letter-spacing: 1px
 
-.slick-slide img 
+.slick-slide img
   width: 2rem
+
+.video-player-list
+  display: flex
+  @media screen and (min-width: $smaller)
+    flex-direction: column
+  @media screen and (min-width: $small)
+    flex-direction: column
+  @media screen and (min-width: $smalless)
+    flex-direction: column
+  @media screen and (min-width: $medium)
+    flex-direction: column
+  @media screen and (min-width: $big)
+    flex-direction: row

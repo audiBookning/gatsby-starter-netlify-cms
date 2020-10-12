@@ -7,6 +7,7 @@ import Gallery from "react-photo-gallery";
 import Layout from "../components/Layout";
 import MytagsPageQuery from "../components/tagTitle";
 import TraducaoSlider from "../components/TraducaoSlider";
+import VideoPlayer from '../components/VideoPlayer';
 
 const getImageSrc = (imageInfo) => {
   const { childImageSharp, image } = imageInfo;
@@ -93,60 +94,6 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
     setViewerIsOpen(false);
   };
 
-  var settings = {
-    dots: true,
-    /*  */
-    customPaging: function (i) {
-      const linguagem = ["PT", "FR", "EN"];
-      return (
-        <button href="#">
-          <p>{linguagem[i]}</p>
-        </button>
-      );
-    },
-    /*  */
-    //centerMode: true,
-    infinite: true,
-    swipeToSlide: true,
-    centerPadding: "60px",
-    slidesToShow: 3,
-    /*  */
-    /* infinite: false,    
-    slidesToShow: 3, */
-    speed: 500,
-    slidesToScroll: 3,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-          centerMode: true,
-        },
-      },
-      {
-        breakpoint: 880,
-        settings: {
-          slidesToShow: 1,
-          infinite: true,
-          slidesToScroll: 1,
-          centerMode: true,
-        },
-      },
-      {
-        breakpoint: 660,
-        settings: {
-          slidesToShow: 1,
-          infinite: true,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <div>
       <div
@@ -201,7 +148,7 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
         </div>
         <TraducaoSlider />
 
-        <div style={{ display: "none" }}>
+        <div style={{ display: "none" }}> 
           <div className="slick-slider">
             <div className="slick-list">
               <div className="slick-track">
@@ -210,6 +157,10 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="video-player-list" >
+      <VideoPlayer publicId="video%2Fvideo01wztmkg"/>
+      <VideoPlayer publicId="video%2Fvideo02qcwwib"/>
       </div>
       <div className="galeria">
         {sortedFotos &&
