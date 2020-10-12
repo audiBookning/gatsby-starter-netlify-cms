@@ -186,4 +186,5 @@ gallery:
     tags-field: Outras-Localidades
   - image: /img/6246_02_5b96b1f73c2b8.jpg
     tags-field: Foz-do-Arelho
+test-relation: paisagem
 ---
