@@ -2,7 +2,11 @@ import PropTypes from "prop-types";
 import React from "react";
 import { IndexPageTemplate } from "../../templates/index-page";
 
-const IndexPagePreview = ({ entry, getAsset }) => { 
+const IndexPagePreview = (props) => { 
+  const { entry, getAsset, fieldsMetaData  } = props
+  console.log('IndexPagePreview props: ', props)
+  console.log('IndexPagePreview fieldsMetaData : ', fieldsMetaData )
+  console.log('IndexPagePreview entry: ', entry)
   const data = entry.getIn(["data"]).toJS();
   console.log("IndexPagePreview data: ", JSON.stringify(data, null, 2));
   //const formatedGallery = data.gallery.map((image) => getAsset(image.image));
