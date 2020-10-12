@@ -152,7 +152,7 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery }) => {
           <div className="slick-slider">
             <div className="slick-list">
               <div className="slick-track">
-                <div className="slick-slide"></div>
+                <div className="slick-slide"></div> 
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 $smaller: 350px
+$smaller02: 450px
 $small: 540px
 $smalless: 780px
 $medium: 880px
@@ -90,3 +91,21 @@ p
     flex-direction: column
   @media screen and (min-width: $big)
     flex-direction: row
+    height: 380px
+
+iframe
+  margin: auto
+  margin-top: 20px
+  height: 240px
+  @media screen and (min-width: $smaller)
+    height: 240px
+  @media screen and (min-width: $smaller02)
+    height: 340px
+  @media screen and (min-width: $small)
+    height: 440px
+  @media screen and (min-width: $smalless)
+    height: 580px
+
+video
+  width: 100%    !important
+  height: auto   !important
