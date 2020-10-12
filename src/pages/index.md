@@ -3,7 +3,7 @@ templateKey: index-page
 title: Amazing View
 heading: Amazing View
 subheading: Lagoa de Óbidos
-description: Amazing View - Lagoa de Óbidos
+description: Amazing View Website - Lagoa de Óbidos
 jumbo: /img/6f95e92f-9c02-4f41-a42c-113046a47213.jpg
 gallery:
   - image: /img/b06.jpg
