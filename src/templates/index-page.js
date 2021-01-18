@@ -50,10 +50,10 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery, tagArray 
     "IndexPageTemplate tags: ",
     JSON.stringify(tagArray, null, 2)
   );
-  //const { tag: tagArray } = MytagsPageQuery();
-  /* console.log( 
+  /* const { tag } = MytagsPageQuery();
+  console.log( 
     "IndexPageTemplate mytagsPageQuery: ",
-    JSON.stringify(tagArray, null, 2)
+    JSON.stringify(tag, null, 2)
   ); */
   console.log('IndexPageTemplate jumbo: ', jumbo)
 
