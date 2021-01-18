@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { IndexPageTemplate } from "../../templates/index-page";
 
-const IndexPagePreview = (props) => { 
+const IndexPagePreview = (props) => {
   const { entry, getAsset, fieldsMetaData  } = props
   console.log('IndexPagePreview props: ', props)
   console.log('IndexPagePreview fieldsMetaData : ', fieldsMetaData )
