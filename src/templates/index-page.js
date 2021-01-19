@@ -46,16 +46,16 @@ const getImageSrc = (imageInfo) => {
 }; 
 
 export const IndexPageTemplate = ({ title, subheading, jumbo, gallery, tagArray }) => {
-  console.log( 
+  /* console.log( 
     "IndexPageTemplate tags: ",
     JSON.stringify(tagArray, null, 2)
-  );
+  ); */
   /* const { tag } = MytagsPageQuery();
   console.log( 
     "IndexPageTemplate mytagsPageQuery: ",
     JSON.stringify(tag, null, 2)
   ); */
-  console.log('IndexPageTemplate jumbo: ', jumbo)
+  //console.log('IndexPageTemplate jumbo: ', jumbo)
 
   var grouped = groupBy(gallery, function (x) {
     return x.tags_field;
@@ -74,7 +74,7 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery, tagArray 
     }
   }
   //console.log("*****************************************");
-  console.log("fotos: ", fotos);
+  //console.log("fotos: ", fotos);
 
   const sortedFotos = tagArray.map((tag) =>
     fotos.find((foto) => foto.description === tag.description)
@@ -82,7 +82,7 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery, tagArray 
   // TODO: trim empty tags to avoid undefined error in build
 
   //console.log("*****************************************");
-  console.log("sorted fotos: ", sortedFotos);
+  //console.log("sorted fotos: ", sortedFotos);
 
   const photos = gallery.map((x) => {
     return getImageSrc(x);
@@ -222,7 +222,7 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
-  console.log('IndexPage data: ', data)
+  //console.log('IndexPage data: ', data)
   const { frontmatter } = data.page;
   const tagArray = data.tagArray.frontmatter.tag;
 

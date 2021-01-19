@@ -4,11 +4,11 @@ import { IndexPageTemplate } from "../../templates/index-page";
 
 const IndexPagePreview = (props) => {
   const { entry, getAsset, fieldsMetaData  } = props
-  console.log('IndexPagePreview props: ', props)
-  console.log('IndexPagePreview fieldsMetaData : ', fieldsMetaData )
-  console.log('IndexPagePreview entry: ', entry)
+  // console.log('IndexPagePreview props: ', props)
+  // console.log('IndexPagePreview fieldsMetaData : ', fieldsMetaData )
+  // console.log('IndexPagePreview entry: ', entry)
   const data = entry.getIn(["data"]).toJS();
-  console.log("IndexPagePreview data: ", JSON.stringify(data, null, 2));
+  // console.log("IndexPagePreview data: ", JSON.stringify(data, null, 2));
   //const formatedGallery = data.gallery.map((image) => getAsset(image.image));
   /* console.log(
     "IndexPagePreview formatedGallery: ",
