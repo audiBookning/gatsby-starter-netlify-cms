@@ -6,25 +6,25 @@ subheading: Lagoa de Óbidos
 description: Amazing View Website - Lagoa de Óbidos
 jumbo: /img/6f95e92f-9c02-4f41-a42c-113046a47213.jpg
 gallery:
-  - image: /img/nov-dez-2020-01
+  - image: /img/nov-dez-2020-01.jpg
     tags-field: Novembro-Dezembro-2020
-  - image: /img/nov-dez-2020-02
+  - image: /img/nov-dez-2020-02.jpg
     tags-field: Novembro-Dezembro-2020
-  - image: /img/nov-dez-2020-03
+  - image: /img/nov-dez-2020-03.jpg
     tags-field: Novembro-Dezembro-2020
-  - image: /img/nov-dez-2020-04
+  - image: /img/nov-dez-2020-04.jpg
     tags-field: Novembro-Dezembro-2020
-  - image: /img/nov-dez-2020-05
+  - image: /img/nov-dez-2020-05.jpg
     tags-field: Novembro-Dezembro-2020
-  - image: /img/nov-dez-2020-06
+  - image: /img/nov-dez-2020-06.jpg
     tags-field: Novembro-Dezembro-2020
-  - image: /img/nov-dez-2020-07
+  - image: /img/nov-dez-2020-07.jpg
     tags-field: Novembro-Dezembro-2020
-  - image: /img/nov-dez-2020-08
+  - image: /img/nov-dez-2020-08.jpg
     tags-field: Novembro-Dezembro-2020
-  - image: /img/nov-dez-2020-08
+  - image: /img/nov-dez-2020-08.jpg
     tags-field: Novembro-Dezembro-2020
-  - image: /img/nov-dez-2020-10
+  - image: /img/nov-dez-2020-10.jpg
     tags-field: Novembro-Dezembro-2020
   - image: /img/b06.jpg
     tags-field: paisagem
