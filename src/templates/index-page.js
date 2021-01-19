@@ -16,7 +16,7 @@ const getImageSrc = (imageInfo) => {
 
   if (!!image && !!image.childImageSharp) {
     const { src, srcSet, sizes } = image.childImageSharp.fluid;
-    const { height, width } = image.childImageSharp.original;
+    const { height, width } = image.childImageSharp.original; 
 
     return {
       key: Math.random().toString(),
@@ -66,7 +66,7 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery, tagArray 
     if (grouped.hasOwnProperty(key)) {
       const ff = grouped[key].map((x) => {
         return getImageSrc(x);
-      });
+      }).filter(Boolean);
       const result = tagArray.find((obj) => {
         return obj.name === key;
       });

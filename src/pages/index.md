@@ -22,7 +22,7 @@ gallery:
     tags-field: Novembro-Dezembro-2020
   - image: /img/nov-dez-2020-08.jpg
     tags-field: Novembro-Dezembro-2020
-  - image: /img/nov-dez-2020-08.jpg
+  - image: /img/nov-dez-2020-09.jpg
     tags-field: Novembro-Dezembro-2020
   - image: /img/nov-dez-2020-10.jpg
     tags-field: Novembro-Dezembro-2020
