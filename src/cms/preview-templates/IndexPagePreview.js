@@ -15,6 +15,16 @@ const IndexPagePreview = (props) => {
     JSON.stringify(formatedGallery, null, 2)
   ); */
 
+  /* const pp = loadEntry('tags_files', 'mytags')
+  console.log("IndexPagePreview loadEntry pp: ", JSON.stringify(pp, null, 2)); */
+
+   /* widgetsFor('mytags').foreach(function(tags, index) {
+     console.log("IndexPagePreview widgetsFor tags: ", JSON.stringify(tags, null, 2));
+    const tagsTemp = tags.getIn(["data"]).toJS();
+    console.log("IndexPagePreview widgetsFor tagsTemp: ", JSON.stringify(tagsTemp, null, 2));
+    
+  }) */
+
   if (data) {
     return (
       <IndexPageTemplate

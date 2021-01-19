@@ -74,15 +74,15 @@ export const IndexPageTemplate = ({ title, subheading, jumbo, gallery, tagArray 
     }
   }
   //console.log("*****************************************");
-  //console.log("fotos: ", fotos);
+  console.log("fotos: ", fotos);
 
   const sortedFotos = tagArray.map((tag) =>
     fotos.find((foto) => foto.description === tag.description)
-  );
+  ).filter(Boolean);
   // TODO: trim empty tags to avoid undefined error in build
 
   //console.log("*****************************************");
-  //console.log("sorted fotos: ", sortedFotos);
+  console.log("sorted fotos: ", sortedFotos);
 
   const photos = gallery.map((x) => {
     return getImageSrc(x);

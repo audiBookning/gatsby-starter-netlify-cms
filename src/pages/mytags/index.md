@@ -13,6 +13,6 @@ tag:
     description: São Martinho do Porto
   - name: Outras-Localidades
     description: Outras Localidades
-  - description: Novembro - Dezembro 2020
-    name: Novembro - Dezembro 2020
+  - name: Novembro-Dezembro-2020
+    description: Novembro - Dezembro 2020
 ---
