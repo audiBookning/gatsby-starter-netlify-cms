@@ -15,4 +15,8 @@ tag:
     description: Outras Localidades
   - name: Novembro-Dezembro-2020
     description: Novembro - Dezembro 2020
+  - name: Janeiro-Fevereiro-2021
+    description: Janeiro - Fevereiro 2021
+  - name: Magico-Abril-2021
+    description: Magico Abril 2021
 ---
